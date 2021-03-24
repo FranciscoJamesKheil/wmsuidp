@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDP Generator | Registration</title>
+    <link rel="icon" href="../font/assets/logo/idplogo.png" />
+    <link rel="stylesheet" href="./stylesheet/content/header.css" />
+    <link rel="stylesheet" href="./stylesheet/content/registration.css" />
+    <!--extra style-->
+    <link rel="stylesheet" href="../font/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../font/preloader/loader.css" />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <header class="header">
+      <a class="logo">
+        <img src="../font/assets/logo/idplogo.png" class="img-logo" />
+        <div class="logo-text">
+          WMSU
+          <p>INDIVIDUAL DAILY PROGRAM</p>
+        </div>
+      </a>
+      <div class="pG">
+        <p id="page-title">REGISTRATION</p>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li id="dashboard-mobile">
+          <a href="./home.html" id="slide-home">
+            <p class="far fa-home"></p>
+            Home
+          </a>
+        </li>
+        <li id="dashboard-mobile">
+          <a href="./dashboard.html" id="slide-dashboard">
+            <p class="far fa-tachometer-alt"></p>
+            Dashboard
+          </a>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">Maintenance Settings</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a class="active" href="./registration.html" id="slide-faculty"
+                  ><p class="fas fa-user"></p>
+                  Faculty Member</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">General Information</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./matrix.html" id="slide-matrix"
+                  ><p class="far fa-cogs"></p>
+                  Matrix</a
+                ></span
+              >
+              <span
+                ><a href="./officials.html" id="slide-officials"
+                  ><p class="far fa-users"></p>
+                  Officials</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown-nav">
+            <p class="far fa-user-circle"></p>
+            <span class="nav-title" id="profile">Account</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./profile.html" id="slide-profile"
+                  ><p class="far fa-user-cog"></p>
+                  Profile</a
+                ></span
+              >
+              <br />
+              <span
+                ><a
+                  href="../../index.php"
+                  id="slide-sign-out"
+                  class="bdr-top-line"
+                  ><p class="far fa-sign-out"></p>
+                  Logout</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <nav class="side-nav">
+      <div class="side-nav-logo">
+        <img src="../font/assets/logo/idplogo.png" alt="" />
+        <p id="nav-hd">WMSU IDP Generator</p>
+      </div>
+      <ul>
+        <a href="./home.html"
+          ><li><span class="far fa-home"></span>Home</li></a
+        >
+        <a href="./dashboard.html"
+          ><li><span class="far fa-tachometer-alt"></span>Dashboard</li></a
+        >
+        <li id="label-settings">Maintenance Settings</li>
+        <a href="./registration.html"
+          ><li class="active-sn">
+            <span class="fas fa-user"></span>Faculty Member
+          </li></a
+        >
+        <li id="label-settings">General Information</li>
+        <a href="./matrix.html"
+          ><li><span class="far fa-cogs"></span>Matrix</li></a
+        >
+        <a href="./officials.html"
+          ><li><span class="far fa-users"></span>Officials</li></a
+        >
+      </ul>
+    </nav>
+    <main>
+      <!--preloader-->
+      <div class="loader">
+        <div class="preloadermain">
+          <div class="precircle"></div>
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain1">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+      </div>
+      <script src="../font/preloader/loader.js"></script>
+
+      <div class="main">
+        <section>
+          <div class="con">
+            <img
+              id="con-vector"
+              src="../font/assets/vector/3992745.jpg"
+              alt=""
+            />
+            <div class="info">
+              <h3>Register Faculty Member</h3>
+              <br />
+              <p>
+                Register College and Create account for College Administrator or
+                the Secretary.
+              </p>
+            </div>
+            <div class="field">
+              <form action="">
+                <div class="field-admin">
+                  <div class="admin-con">
+                    <label for="">First Name:</label>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      id="capitalize"
+                      required
+                    />
+                  </div>
+                  <div class="admin-con">
+                    <label for="">Last Name:</label>
+                    <input
+                      type="text"
+                      autocomplete="off"
+                      id="capitalize"
+                      required
+                    />
+                  </div>
+                  <div class="admin-con" style="width: 10rem">
+                    <label for="">M.I (Optional):</label>
+                    <input
+                      type="text"
+                      maxlength="1"
+                      style="width: 3rem; text-transform: uppercase"
+                      autocomplete="off"
+                    />
+                  </div>
+                </div>
+                <div class="field-college">
+                  <div class="admin-con">
+                    <label for="">Email Address:</label>
+                    <input type="email" autocomplete="off" required />
+                  </div>
+                </div>
+                <div class="credential">
+                  <div class="cre">
+                    <label for="">Username:</label>
+                    <input type="text" autocomplete="off" required />
+                  </div>
+                  <div class="cre">
+                    <label for="">Password:</label>
+                    <input type="text" autocomplete="off" required />
+                  </div>
+                </div>
+                <div class="field-btn">
+                  <button type="reset" id="btn-reset" title="Clear value">
+                    <span class="fas fa-arrow-left"></span> Reset
+                  </button>
+                  <button
+                    type="submit"
+                    id="btn-submit"
+                    title="Add to Record List"
+                  >
+                    <span class="fas fa-pen"></span> Register
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div id="main-tbl-sec">
+          <div id="sec-tbl">
+            <h3 id="recordtext">RECORD LIST</h3>
+            <div class="search-college">
+              <input
+                type="text"
+                id="myInput"
+                onkeyup="mySearch()"
+                autocomplete="off"
+                placeholder="Search Faculty Name..."
+              />
+            </div>
+          </div>
+          <br />
+          <div class="tblsec">
+            <table id="tblrecord">
+              <tr>
+                <th>#</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Email Address</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th colspan="2" id="cllg-center">Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>
+                  <img
+                    src="../font/assets/icon/user.png"
+                    id="cllglogo"
+                    alt="Profile"
+                  />
+                </td>
+                <td>Arip, John I.</td>
+                <td>john@gmail.com</td>
+                <td>ics-admin</td>
+                <td>ics-120</td>
+                <td id="cllg-center">
+                  <a href="./stylesheet/pop/registration/reg-edit.html"
+                    ><button id="btn-edit">Update</button></a
+                  >
+                </td>
+                <td id="cllg-center">
+                  <button id="btn-del" onclick="openModal()">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>
+                  <img
+                    src="../font/assets/icon/user.png"
+                    id="cllglogo"
+                    alt="Profile"
+                  />
+                </td>
+                <td>Go, Roderick P.</td>
+                <td>go@gmail.com</td>
+                <td>ics-admin</td>
+                <td>ics-120</td>
+                <td id="cllg-center">
+                  <a href="./stylesheet/pop/registration/reg-edit.html"
+                    ><button id="btn-edit">Update</button></a
+                  >
+                </td>
+                <td id="cllg-center">
+                  <button id="btn-del" onclick="openModal()">Delete</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <script>
+            function mySearch() {
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("tblrecord");
+              tr = table.getElementsByTagName("tr");
+
+              for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                  txtValue = td.textContent || td.innerText;
+                  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                  } else {
+                    tr[i].style.display = "none";
+                  }
+                }
+              }
+            }
+          </script>
+        </div>
+      </div>
+      <div class="modal-container" id="modal01">
+        <div class="modal-content">
+          <h2><span class="far fa-times"></span> Warning Database</h2>
+          <p>
+            You're going to delete permanently the database of the specific
+            faculty member including:
+          </p>
+          <br />
+          <p>Faculty Data and their IDP schedule data.</p>
+          <div class="college-button">
+            <button id="cancel" onclick="closeModal()">
+              <span class="fas fa-times"></span> Cancel
+            </button>
+            <button type="submit" id="submit">
+              <span class="fas fa-trash"></span> Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+      <script>
+        function openModal() {
+          document.getElementById("modal01").style.display = "block";
+        }
+        function closeModal() {
+          document.getElementById("modal01").style.display = "none";
+        }
+      </script>
+      <footer>
+        <p>
+          <img
+            id="img-footer"
+            src="../font/assets/logo/wmsulogo.png"
+            alt="IDP"
+          />All Rights Reserved &copy 2021 WMSU IDP
+          <img
+            id="img-footer"
+            src="../font/assets/logo/idplogo.png"
+            alt="IDP"
+          />
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>

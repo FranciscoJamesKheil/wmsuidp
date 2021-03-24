@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDP Generator | My Schedule</title>
+    <link rel="icon" href="../font/assets/logo/idplogo.png" />
+    <link rel="stylesheet" href="./stylesheet/content/header.css" />
+    <link rel="stylesheet" href="./stylesheet/content/myidp.css" />
+    <!--extra style-->
+    <link rel="stylesheet" href="../font/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../font/preloader/loader.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <header class="header">
+      <a class="logo">
+        <img src="../font/assets/logo/idplogo.png" class="img-logo" />
+        <div class="logo-text">
+          WMSU
+          <p>INDIVIDUAL DAILY PROGRAM</p>
+        </div>
+      </a>
+      <div class="pG">
+        <p id="page-title">MY SCHEDULE</p>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li id="dashboard-mobile">
+          <a href="./home.html" id="slide-home">
+            <p class="far fa-home"></p>
+            Home
+          </a>
+        </li>
+        <li id="dashboard-mobile">
+          <a href="./dashboard.html" id="slide-dashboard">
+            <p class="far fa-tachometer-alt"></p>
+            Dashboard
+          </a>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">IDP Settings</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a class="active" href="./myIDP.html" id="slide-faculty"
+                  ><p class="fas fa-calendar"></p>
+                  My Schedule</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">General Information</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./matrix.html" id="slide-matrix"
+                  ><p class="far fa-cogs"></p>
+                  Matrix</a
+                ></span
+              >
+              <span
+                ><a href="./officials.html" id="slide-officials"
+                  ><p class="far fa-users"></p>
+                  Officials</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown-nav">
+            <p class="far fa-user-circle"></p>
+            <span class="nav-title" id="profile">Account</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./profile.html" id="slide-profile"
+                  ><p class="far fa-user-cog"></p>
+                  Profile</a
+                ></span
+              >
+              <br />
+              <span
+                ><a
+                  href="../../index.php"
+                  id="slide-sign-out"
+                  class="bdr-top-line"
+                  ><p class="far fa-sign-out"></p>
+                  Logout</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <nav class="side-nav">
+      <div class="side-nav-logo">
+        <img src="../font/assets/logo/idplogo.png" alt="" />
+        <p id="nav-hd">WMSU IDP Generator</p>
+      </div>
+      <ul>
+        <a href="./home.html"
+          ><li><span class="far fa-home"></span>Home</li></a
+        >
+        <a href="./dashboard.html"
+          ><li><span class="far fa-tachometer-alt"></span>Dashboard</li></a
+        >
+        <li id="label-settings">IDP Settings</li>
+        <a href="./myIDP.html"
+          ><li class="active-sn">
+            <span class="fas fa-calendar"></span>My Schedule
+          </li></a
+        >
+        <li id="label-settings">General Information</li>
+        <a href="./matrix.html"
+          ><li><span class="far fa-cogs"></span>Matrix</li></a
+        >
+        <a href="./officials.html"
+          ><li><span class="far fa-users"></span>Officials</li></a
+        >
+      </ul>
+    </nav>
+    <main>
+      <!--preloader-->
+      <div class="loader">
+        <div class="preloadermain">
+          <div class="precircle"></div>
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain1">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+      </div>
+      <script src="../font/preloader/loader.js"></script>
+      <!--content-->
+      <div class="main">
+        <div class="content-header">
+          <div class="img-head">
+            <img
+              src="../font/assets/vector/3125019.jpg"
+              id="idpvector"
+              alt=""
+            />
+          </div>
+          <div class="basic">
+            <div class="info">
+              <p>Name</p>
+              <input type="text" id="name" value="" disabled />
+              <p>Academic Rank:</p>
+              <input type="text" id="rank" value="" disabled />
+              <p>Designation:</p>
+              <input type="text" id="designation" value="" disabled />
+              <p>Release Time:</p>
+              <input type="text" id="release" value="" disabled />
+            </div>
+            <div class="info">
+              <p>Educational Qualification:</p>
+              <input type="text" id="qualification" value="" disabled />
+              <p>Major Assignment:</p>
+              <input type="text" id="assessment" value="" disabled />
+              <div class="btn-field">
+                <a href="./stylesheet/pop/myIDP/fillup.html"
+                  ><button type="button" id="editdet">Go to Update</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="day-tag">DAYS OF WORK</p>
+      <div class="day-content">
+        <div class="divide">
+          <div class="horizontal">
+            <!--MON-->
+            <div class="content">
+              <div class="img-day">
+                <p id="day-txt">MON</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b><input type="text" value="8" hidden />8</b>
+                  <!--SUM DATABASE-->
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/monday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+            <!--TUE-->
+            <div class="content">
+              <div class="img-day" id="tue">
+                <p id="day-txt">TUE</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b>8</b>
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/tuesday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divide">
+          <div class="horizontal">
+            <!--WED-->
+            <div class="content">
+              <div class="img-day" id="wed">
+                <p id="day-txt">WED</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b>8</b>
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/wednesday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+            <!--THU-->
+            <div class="content">
+              <div class="img-day" id="thu">
+                <p id="day-txt">THU</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b>8</b>
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/thursday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divide">
+          <div class="horizontal">
+            <!--FRI-->
+            <div class="content">
+              <div class="img-day" id="fri">
+                <p id="day-txt">FRI</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b>8</b>
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/friday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+            <!--SAT-->
+            <div class="content">
+              <div class="img-day" id="sat">
+                <p id="day-txt">SAT</p>
+              </div>
+              <div class="day-info">
+                <div class="day-total">
+                  <p>Total Subject:</p>
+                  <b>3</b>
+                </div>
+                <div class="day-total">
+                  <p>Daily Hours:</p>
+                  <b>8</b>
+                </div>
+              </div>
+              <div class="day-btn">
+                <a href="./day/saturday.html"
+                  ><button type="text">Add Schedule</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grand-total">
+        <div class="load-div">
+          <div class="load-label">
+            <p>Number of course preparation:</p>
+            <p>Actual Teaching Load:</p>
+            <p>Overload:</p>
+            <p>Quasi Teaching/ Others:</p>
+          </div>
+          <div class="load-label">
+            <p>3</p>
+            <p>9</p>
+            <p>8</p>
+            <p>32</p>
+          </div>
+        </div>
+        <div class="grand-div">
+          <div class="total">
+            <h2>TOTAL HOURS: <input type="text" id="total-hours" value="40" disabled/></h2>
+          </div>
+          <br />
+          <button type="button" id="btn-print" onclick="printornot()"><span class="fas fa-print"></span> Print</button>
+          <script>
+            var totalH = document.getElementById("total-hours").value;
+
+            if(totalH < 40)
+              document.getElementById("btn-print").style="background: rgb(160, 0, 0); opacity: 0.5";
+
+            function printornot() {
+              if(totalH < 40)
+                alert("40-hour or more is needed to print your Individual Daily Program.");
+              else
+                open("./idp/print.html");
+            }
+          </script>
+        </div>
+      </div>
+      <footer>
+        <p>
+          <img
+            id="img-footer"
+            src="../font/assets/logo/wmsulogo.png"
+            alt="IDP"
+          />All Rights Reserved &copy 2021 WMSU IDP
+          <img
+            id="img-footer"
+            src="../font/assets/logo/idplogo.png"
+            alt="IDP"
+          />
+        </p>
+      </footer>
+    </main>
+
+    <div class="modal-container" id="notification01">
+      <div class="modal-content">
+        <div class="arrow"></div>
+        <h2>Hello name</h2>
+        <br />
+        <p>Fill up first the form...</p>
+        <p>Update Now?</p>
+        <div class="btn-alert">
+          <button type="button" onclick="closeNotif()" id="skip">Skip</button>
+          <a href="./stylesheet/pop/myIDP/fillup.html"
+            ><button type="button">Okay</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      var name = document.getElementById("name").value;
+      var rank = document.getElementById("rank").value;
+      var quali = document.getElementById("qualification").value;
+      var assess = document.getElementById("assessment").value;
+
+      if (name === "" || rank === "" || quali === "" || assess === "") {
+        setInterval(() => {
+          document.getElementById("notification01").style.opacity = 1;
+        }, 2000);
+      } else {
+        document.getElementById("notification01").style.display = "none";
+      }
+      function closeNotif() {
+        setInterval(() => {
+          document.getElementById("notification01").style.opacity = 0;
+        }, 0);
+        setInterval(() => {
+          document.getElementById("notification01").style.display = "none";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

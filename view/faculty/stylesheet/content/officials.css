@@ -1,0 +1,78 @@
+main {
+  width: 85%;
+  position: absolute;
+  top: 60px;
+  right: 0;
+}
+.main {
+  background: rgb(255, 255, 255);
+  color: rgb(140, 0, 0);
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+}
+.main img {
+  width: 5rem;
+  margin-bottom: 10px;
+}
+.main #wmsu-vec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.official-member {
+  background: white;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 20px;
+  display: flex;
+  color: rgb(70, 70, 70);
+}
+.official-member #icon-user {
+  width: 5rem;
+  height: 5rem;
+}
+.official-details {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  height: 5rem;
+  width: 100%;
+  padding: 5px;
+  margin-top: 40px;
+  background: rgb(200, 200, 200);
+  color: rgb(70, 70, 70);
+  text-align: center;
+}
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer #img-footer {
+  width: 1.5rem;
+  margin: 0 3px;
+}
+@media screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+  section {
+    width: 97%;
+    flex-direction: column;
+  }
+  footer {
+    position: relative;
+  }
+  ::-webkit-scrollbar {
+    height: 5px;
+  }
+}

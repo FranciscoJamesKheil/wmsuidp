@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDP Generator | Profile</title>
+    <link rel="icon" href="../font/assets/logo/idplogo.png" />
+    <link rel="stylesheet" href="./stylesheet/content/header.css" />
+    <link rel="stylesheet" href="./stylesheet/content/profile.css" />
+    <!--extra style-->
+    <link rel="stylesheet" href="../font/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../font/preloader/loader.css" />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <header class="header">
+      <a class="logo">
+        <img src="../font/assets/logo/idplogo.png" class="img-logo" />
+        <div class="logo-text">
+          WMSU
+          <p>INDIVIDUAL DAILY PROGRAM</p>
+        </div>
+      </a>
+      <div class="pG">
+        <p id="page-title">Profile</p>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li id="dashboard-mobile">
+          <a href="./home.html" id="slide-home">
+            <p class="far fa-home"></p>
+            Home
+          </a>
+        </li>
+        <li id="dashboard-mobile">
+          <a href="./dashboard.html" id="slide-dashboard">
+            <p class="far fa-tachometer-alt"></p>
+            Dashboard
+          </a>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">Maintenance Settings</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./registration.html" id="slide-faculty"
+                  ><p class="far fa-user"></p>
+                  Faculty Member</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">General Information</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="./matrix.html" id="slide-matrix"
+                  ><p class="far fa-cogs"></p>
+                  Matrix</a
+                ></span
+              >
+              <span
+                ><a href="./officials.html" id="slide-officials"
+                  ><p class="far fa-users"></p>
+                  Officials</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown-nav">
+            <p class="fas fa-user-circle"></p>
+            <span class="nav-title" id="profile">Account</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a class="active" href="./profile.html" id="slide-profile"
+                  ><p class="fas fa-user-cog"></p>
+                  Profile</a
+                ></span
+              >
+              <br />
+              <span
+                ><a
+                  href="../../index.php"
+                  id="slide-sign-out"
+                  class="bdr-top-line"
+                  ><p class="far fa-sign-out"></p>
+                  Logout</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <nav class="side-nav">
+      <div class="side-nav-logo">
+        <img src="../font/assets/logo/idplogo.png" alt="" />
+        <p id="nav-hd">WMSU IDP Generator</p>
+      </div>
+      <ul>
+        <a href="./home.html"
+          ><li><span class="far fa-home"></span>Home</li></a
+        >
+        <a href="./dashboard.html"
+          ><li><span class="far fa-tachometer-alt"></span>Dashboard</li></a
+        >
+        <li id="label-settings">Maintenance Settings</li>
+        <a href="./registration.html"
+          ><li><span class="far fa-user"></span>Faculty Member</li></a
+        >
+        <li id="label-settings">General Information</li>
+        <a href="./matrix.html"
+          ><li><span class="far fa-cogs"></span>Matrix</li></a
+        >
+        <a href="./officials.html"
+          ><li><span class="far fa-users"></span>Officials</li></a
+        >
+      </ul>
+    </nav>
+    <main>
+      <!--preloader-->
+      <div class="loader">
+        <div class="preloadermain">
+          <div class="precircle"></div>
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain1">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+      </div>
+      <script src="../font/preloader/loader.js"></script>
+
+      <section>
+        <ul>
+          <a href="./profile.html" id="link-active">
+            <li>Account Settings</li>
+          </a>
+          <a href="./college.html">
+            <li>College Settings</li>
+          </a>
+        </ul>
+      </section>
+      <div class="main">
+        <div class="content">
+          <div class="pro-detail">
+            <img
+              src="../font/assets/icon/user.png"
+              id="uicon"
+              alt="user-icon"
+            />
+            <button type="button" onclick="openPic()">
+              <span
+                class="fas fa-camera"
+                title="Upload new Profile picture"
+              ></span>
+            </button>
+          </div>
+          <div class="details">
+            <p id="label-header">
+              Basic Information
+              <button type="button" id="btn-edit" onclick="openBasic()">
+                <span class="fas fa-pen"></span> Edit
+              </button>
+            </p>
+            <p>Name: <b></b></p>
+            <p>Position: <b>Admin</b></p>
+          </div>
+          <div class="details">
+            <p id="label-header">
+              Username and Password
+              <button type="button" id="btn-edit" onclick="openUP()">
+                <span class="fas fa-pen"></span> Edit
+              </button>
+            </p>
+            <p>Username: <b></b></p>
+            <p>Password: <b></b></p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>
+          <img
+            id="img-footer"
+            src="../font/assets/logo/wmsulogo.png"
+            alt="IDP"
+          />All Rights Reserved &copy 2021 WMSU IDP
+          <img
+            id="img-footer"
+            src="../font/assets/logo/idplogo.png"
+            alt="IDP"
+          />
+        </p>
+      </footer>
+    </main>
+    <!--modal-->
+    <div class="modal-container" id="pic01">
+      <div class="modal-content">
+        <form action="">
+          <h2><span class="far fa-camera"></span> Profile Picture</h2>
+          <br />
+          <p>Upload your new profile picture</p>
+          <br />
+          <input type="file" id="pro-image" required/>
+          <div class="pro-button">
+            <button type="button" id="cancel" onclick="closeModal()">
+              <span class="fas fa-times"></span> Cancel
+            </button>
+            <button type="submit" id="submit">
+              <span class="fas fa-check"></span> Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--basic info-->
+    <div class="modal-container" id="basic01">
+      <div class="modal-content">
+        <form action="">
+          <h2><span class="far fa-info"></span> Basic Information</h2>
+          <br />
+          <label for="">Name: </label><br />
+          <input
+            type="text"
+            placeholder="First Name Last Name" required
+          /><br />
+          <label for="">Position: </label><br />
+          <input type="text" value="Admin (default)" id="def" title="Default" disabled />
+          <br />
+          <div class="pro-button">
+            <button type="button" id="cancel" onclick="closeModal()">
+              <span class="fas fa-times"></span> Cancel
+            </button>
+            <button type="submit" id="submit">
+              <span class="fas fa-check"></span> Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--userpassword info-->
+    <div class="modal-container" id="up01">
+      <div class="modal-content">
+        <form action="">
+          <h2><span class="far fa-info"></span> Credential Information</h2>
+          <br />
+          <label for="">Username: </label><br />
+          <input type="text" required/><br />
+          <label for="">Password: </label><br />
+          <input type="text" required/>
+          <br />
+          <div class="pro-button">
+            <button type="button" id="cancel" onclick="closeModal()">
+              <span class="fas fa-times"></span> Cancel
+            </button>
+            <button type="submit" id="submit">
+              <span class="fas fa-check"></span> Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function openPic() {
+        document.getElementById("pic01").style.transform = "scale(1)";
+        document.getElementById("basic01").style.transform = "scale(0)";
+        document.getElementById("up01").style.transform = "scale(0)";
+      }
+      function openBasic() {
+        document.getElementById("pic01").style.transform = "scale(0)";
+        document.getElementById("basic01").style.transform = "scale(1)";
+        document.getElementById("up01").style.transform = "scale(0)";
+      }
+      function openUP() {
+        document.getElementById("pic01").style.transform = "scale(0)";
+        document.getElementById("basic01").style.transform = "scale(0)";
+        document.getElementById("up01").style.transform = "scale(1)";
+      }
+      function closeModal() {
+        document.getElementById("pic01").style.transform = "scale(0)";
+        document.getElementById("basic01").style.transform = "scale(0)";
+        document.getElementById("up01").style.transform = "scale(0)";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDP Generator | My Schedule</title>
+    <link rel="icon" href="../../font/assets/logo/idplogo.png" />
+    <link rel="stylesheet" href="../stylesheet/content/header.css" />
+    <link rel="stylesheet" href="./day.css" />
+    <!--extra style-->
+    <link rel="stylesheet" href="../../font/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../font/preloader/loader.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <header class="header">
+      <a class="logo">
+        <img src="../../font/assets/logo/idplogo.png" class="img-logo" />
+        <div class="logo-text">
+          WMSU
+          <p>INDIVIDUAL DAILY PROGRAM</p>
+        </div>
+      </a>
+      <div class="pG">
+        <p id="page-title">MY SCHEDULE</p>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li id="dashboard-mobile">
+          <a href="../home.html" id="slide-home">
+            <p class="far fa-home"></p>
+            Home
+          </a>
+        </li>
+        <li id="dashboard-mobile">
+          <a href="../dashboard.html" id="slide-dashboard">
+            <p class="far fa-tachometer-alt"></p>
+            Dashboard
+          </a>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">IDP Settings</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a class="active" href="../myIDP.html" id="slide-faculty"
+                  ><p class="fas fa-calendar"></p>
+                  My Schedule</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">General Information</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="../matrix.html" id="slide-matrix"
+                  ><p class="far fa-cogs"></p>
+                  Matrix</a
+                ></span
+              >
+              <span
+                ><a href="../officials.html" id="slide-officials"
+                  ><p class="far fa-users"></p>
+                  Officials</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown-nav">
+            <p class="far fa-user-circle"></p>
+            <span class="nav-title" id="profile">Account</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="../profile.html" id="slide-profile"
+                  ><p class="far fa-user-cog"></p>
+                  Profile</a
+                ></span
+              >
+              <br />
+              <span
+                ><a
+                  href="../../../index.php"
+                  id="slide-sign-out"
+                  class="bdr-top-line"
+                  ><p class="far fa-sign-out"></p>
+                  Logout</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <nav class="side-nav">
+      <div class="side-nav-logo">
+        <img src="../../font/assets/logo/idplogo.png" alt="" />
+        <p id="nav-hd">WMSU IDP Generator</p>
+      </div>
+      <ul>
+        <a href="../home.html"
+          ><li><span class="far fa-home"></span>Home</li></a
+        >
+        <a href="../dashboard.html"
+          ><li><span class="far fa-tachometer-alt"></span>Dashboard</li></a
+        >
+        <li id="label-settings">IDP Settings</li>
+        <a href="../myIDP.html"
+          ><li class="active-sn">
+            <span class="fas fa-calendar"></span>My Schedule
+          </li></a
+        >
+        <li id="label-settings">General Information</li>
+        <a href="../matrix.html"
+          ><li><span class="far fa-cogs"></span>Matrix</li></a
+        >
+        <a href="../officials.html"
+          ><li><span class="far fa-users"></span>Officials</li></a
+        >
+      </ul>
+    </nav>
+    <main>
+      <!--preloader-->
+      <div class="loader">
+        <div class="preloadermain">
+          <div class="precircle"></div>
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain1">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+      </div>
+      <script src="../../font/preloader/loader.js"></script>
+
+      <!--content-->
+      <div class="the-day">
+        <div class="arrow-left">
+          <a href="../myIDP.html"><span class="fas fa-arrow-left"></span></a>
+        </div>
+        <h2 id="day-text">MONDAY</h2>
+      </div>
+      <br /><br /><br />
+      <br />
+      <!--actual teaching-->
+      <div class="actual-teaching">
+        <div class="head-opt">
+          <h3 id="ac-tag">Actual Teaching Load</h3>
+          <div class="point"><span class="fas fa-arrow-left"></span></div>
+          <span
+            id="add-sd"
+            class="fas fa-plus-circle"
+            onclick="openAC()"
+          ></span>
+        </div>
+        <div class="scroll">
+          <table id="ac-tbl" border="1">
+            <tr>
+              <th>Subject</th>
+              <th>Section</th>
+              <th>Number of Students</th>
+              <th>Time</th>
+              <th>Room</th>
+              <th>Hours</th>
+              <th colspan="2">Action</th>
+            </tr>
+            <tr>
+              <td>iyhdis9124</td>
+              <td>BSCS013</td>
+              <td>32</td>
+              <td>10:00 - 11:30</td>
+              <td>CPADS 2</td>
+              <td>1.5</td>
+              <td>
+                <button type="button" id="edit" onclick="aceditsched()">
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button type="button" id="del" onclick="acdelsched()">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!--modal-->
+      <div class="modal-container" id="ac01">
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="far fa-calendar"></span> Actual Teaching Load</h2>
+            <br />
+            <p>Upload your new profile picture</p>
+            <br />
+            <label for="">Subject: </label>
+            <input type="text" required />
+            <label for="">Section: </label>
+            <input type="text" required />
+            <label for="">Number of Students: </label>
+            <input type="number" id="no-studs" onchange="noStuds()" required />
+            <label for="">Time: </label>
+            <div class="time-gap">
+              <p>From:</p>
+              <select name="time-from-ac" id="time-from-ac" onchange="calac()">
+                <option value="7.0">7:00 AM</option>
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13.0">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+              </select>
+              <p>To:</p>
+              <select name="time-to-ac" id="time-to-ac" onchange="calac()">
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13.0">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+                <option value="19.5">7:30 PM</option>
+                <option value="20.0">8:00 PM</option>
+                <option value="20.5">8:30 PM</option>
+              </select>
+            </div>
+            <br />
+            <label for="">Room: </label>
+            <input type="text" required />
+            <label for="">Hours: </label>
+            <input
+              type="text"
+              id="ac-hours"
+              style="cursor: not-allowed"
+              disabled
+            />
+            <div class="pro-button">
+              <button type="reset" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Save
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--Modal Delete for AC-->
+      <div class="modal-container" id="acdel01">
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="fas fa-exclamation"></span> Message From ATL:</h2>
+            <br />
+            <p>Schedule will remove permanently.</p>
+            <div class="matrix-button">
+              <button type="button" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Remove
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!--overload-->
+      <div class="actual-teaching">
+        <div class="head-opt">
+          <h3 id="ac-tag">Overload</h3>
+          <div class="point-1"><span class="fas fa-arrow-left"></span></div>
+          <span
+            id="add-sd"
+            class="fas fa-plus-circle"
+            onclick="openOL()"
+          ></span>
+        </div>
+        <div class="scroll">
+          <table id="ac-tbl" border="1">
+            <tr>
+              <th>Subject</th>
+              <th>Section</th>
+              <th>Number of Students</th>
+              <th>Time</th>
+              <th>Room</th>
+              <th>Hours</th>
+              <th colspan="2">Action</th>
+            </tr>
+            <tr>
+              <td>iyhdis9124</td>
+              <td>BSCS013</td>
+              <td>32</td>
+              <td>10:00 - 11:30</td>
+              <td>CPADS 2</td>
+              <td>1.5</td>
+              <td>
+                <button type="button" id="edit" onclick="oldelsched()">
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button type="button" id="del" onclick="oldelsched()">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--modal-->
+      <div class="modal-container" id="ol01">
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="far fa-calendar"></span> Overload</h2>
+            <br />
+            <p>Upload your new profile picture</p>
+            <br />
+            <label for="">Subject: </label>
+            <input type="text" required />
+            <label for="">Section: </label>
+            <input type="text" required />
+            <label for="">Number of Students: </label>
+            <input
+              type="number"
+              id="no-studs-ol"
+              onchange="noStudsOl()"
+              required
+            />
+            <label for="">Time: </label>
+            <div class="time-gap">
+              <p>From:</p>
+              <select name="time-from-ol" id="time-from-ol" onchange="calol()">
+                <option value="7.0">7:00 AM</option>
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13.0">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+              </select>
+              <p>To:</p>
+              <select name="time-to-ol" id="time-to-ol" onchange="calol()">
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13.0">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+                <option value="19.5">7:30 PM</option>
+                <option value="20.0">8:00 PM</option>
+                <option value="20.5">8:30 PM</option>
+              </select>
+            </div>
+            <br />
+            <label for="">Room: </label>
+            <input type="text" required />
+            <label for="">Hours: </label>
+            <input
+              type="text"
+              id="ol-hours"
+              style="cursor: not-allowed"
+              disabled
+            />
+            <div class="pro-button">
+              <button type="reset" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Save
+              </button>
+            </div>
+          </form>
+        </div>
+        <!--should not less than 10-->
+        <script>
+          function noStuds() {
+            var ac = document.getElementById("no-studs").value;
+
+            if (ac <= 20) {
+              alert("Minimum number of students");
+              document.getElementById("no-studs").value = "";
+            } else if (ac > 50) {
+              alert("Maximum number of students");
+              document.getElementById("no-studs").value = "";
+            } else {
+              return ac;
+            }
+          }
+          function noStudsOl() {
+            var ac = document.getElementById("no-studs-ol").value;
+
+            if (ac <= 20) {
+              alert("Minimum number of students");
+              document.getElementById("no-studs-ol").value = "";
+            } else if (ac > 50) {
+              alert("Maximum number of students");
+              document.getElementById("no-studs-ol").value = "";
+            } else {
+              return ac;
+            }
+          }
+        </script>
+      </div>
+
+      <!--Modal Delete for OL-->
+      <div class="modal-container" id="oldel01">
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="fas fa-exclamation"></span> Message from OL:</h2>
+            <br />
+            <p>Schedule will remove permanently.</p>
+            <div class="matrix-button">
+              <button type="button" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Remove
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--quasi-->
+      <div class="actual-teaching">
+        <div class="head-opt">
+          <h3 id="ac-tag">Quasi Teaching/Others</h3>
+          <div class="point-2"><span class="fas fa-arrow-left"></span></div>
+          <span
+            id="add-sd"
+            class="fas fa-plus-circle"
+            onclick="openQuasi()"
+          ></span>
+        </div>
+        <div class="scroll">
+          <table id="ac-tbl" border="1">
+            <tr>
+              <th>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </th>
+              <th>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </th>
+              <th>Activity</th>
+              <th>Time</th>
+              <th>Room</th>
+              <th>Hours</th>
+              <th colspan="2">Action</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>iyhdis9124</td>
+              <td>10:00 - 11:30</td>
+              <td>CPADS 2</td>
+              <td>1.5</td>
+              <td>
+                <button type="button" id="edit" onclick="quasieditsched()">
+                  Edit
+                </button>
+              </td>
+              <td>
+                <button type="button" id="del" onclick="quasidelsched()">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <!--modal-->
+      <div class="modal-container" id="quasi01">
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="far fa-calendar"></span> Quasi Teaching Load</h2>
+            <br />
+            <p>
+              Others (Research, Attendance to meetings, Preparation of IDP, DTR,
+              PES and other reports)
+            </p>
+            <br />
+            <label for="">Category: </label>
+            <select name="" id="">
+              <option value="">Research, Extension or Production</option>
+              <option value="">Administrative Function</option>
+              <option value="">Quality Assurance</option>
+              <option value="">Quasi Teaching</option>
+              <option value="">Lesson Preparation</option>
+              <option value="">Others</option>
+            </select>
+            <label for="">Activity: </label>
+            <select name="" id="">
+              <option value="">Research</option>
+              <option value="">Extension</option>
+              <option value="">Production</option>
+              <option value="">-other specify-</option>
+            </select>
+            <label for="">Room: </label>
+            <input type="text" id="room" required />
+            <label for="">Time: </label>
+            <div class="time-gap">
+              <p>From:</p>
+              <select name="time-from-qua" id="time-from-qua" onchange="calq()">
+                <option value="7.0">7:00 AM</option>
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+              </select>
+              <p>To:</p>
+              <select name="time-to-qua" id="time-to-qua" onchange="calq()">
+                <option value="7.5">7:30 AM</option>
+                <option value="8.0">8:00 AM</option>
+                <option value="8.5">8:30 AM</option>
+                <option value="9.0">9:00 AM</option>
+                <option value="9.5">9:30 AM</option>
+                <option value="10.0">10:00 AM</option>
+                <option value="10.5">10:30 AM</option>
+                <option value="11.0">11:00 AM</option>
+                <option value="11.5">11:30 AM</option>
+                <option value="12.0">12:00 PM</option>
+                <option value="12.5">12:30 PM</option>
+                <option value="13.0">1:00 PM</option>
+                <option value="13.5">1:30 PM</option>
+                <option value="14.0">2:00 PM</option>
+                <option value="14.5">2:30 PM</option>
+                <option value="15.0">3:00 PM</option>
+                <option value="15.5">3:30 PM</option>
+                <option value="16.0">4:00 PM</option>
+                <option value="16.5">4:30 PM</option>
+                <option value="17.0">5:00 PM</option>
+                <option value="17.5">5:30 PM</option>
+                <option value="18.0">6:00 PM</option>
+                <option value="18.5">6:30 PM</option>
+                <option value="19.0">7:00 PM</option>
+                <option value="19.5">7:30 PM</option>
+                <option value="20.0">8:00 PM</option>
+                <option value="20.5">8:30 PM</option>
+              </select>
+            </div>
+            <br />
+            <label for="">Hours: </label>
+            <input
+              type="text"
+              id="qua-hours"
+              style="cursor: not-allowed"
+              disabled
+            />
+            <div class="pro-button">
+              <button type="reset" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Save
+              </button>
+            </div>
+          </form>
+        </div>
+        <!--checking hours-->
+        <script>
+          function calq() {
+            var fromqua = document.getElementById("time-from-qua").value;
+            var toqua = document.getElementById("time-to-qua").value;
+            var validate = toqua - fromqua;
+
+            if (validate > 0) {
+              document.getElementById("qua-hours").value = validate;
+            } else if (validate < 0) {
+              alert("Invalid: Negative Hours");
+              document.getElementById("qua-hours").value =
+                "Counter Clockwise occur";
+            } else {
+              alert("Invalid: The same value");
+              document.getElementById("qua-hours").value = 0;
+            }
+          }
+          function calac() {
+            var fromac = document.getElementById("time-from-ac").value;
+            var toqac = document.getElementById("time-to-ac").value;
+            var validate = toqac - fromac;
+
+            if (validate > 0) {
+              document.getElementById("ac-hours").value = validate;
+            } else if (validate < 0) {
+              alert("Invalid: Negative Hours");
+              document.getElementById("ac-hours").value =
+                "Counter Clockwise occur";
+            } else {
+              alert("Invalid: The same value");
+              document.getElementById("ac-hours").value = 0;
+            }
+          }
+          function calol() {
+            var fromol = document.getElementById("time-from-ol").value;
+            var toqol = document.getElementById("time-to-ol").value;
+            var validate = toqol - fromol;
+
+            if (validate > 0) {
+              document.getElementById("ol-hours").value = validate;
+            } else if (validate < 0) {
+              alert("Invalid: Negative Hours");
+              document.getElementById("ol-hours").value =
+                "Counter Clockwise occur";
+            } else {
+              alert("Invalid: The same value");
+              document.getElementById("ol-hours").value = 0;
+            }
+          }
+        </script>
+      </div>
+      <!--Modal Delete for Quasi-->
+      <div class="modal-container" id="quadel01">
+        <br /><br />
+        <br /><br />
+        <br /><br />
+        <div class="modal-content">
+          <form action="">
+            <h2><span class="fas fa-exclamation"></span> Message from Quasi:</h2>
+            <br />
+            <p>Schedule will remove permanently.</p>
+            <div class="matrix-button">
+              <button type="button" id="cancel" onclick="closeModal()">
+                <span class="fas fa-times"></span> Cancel
+              </button>
+              <button type="submit" id="submit">
+                <span class="fas fa-check"></span> Remove
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      function openAC() {
+        document.getElementById("ac01").style.display = "block";
+      }
+      function openOL() {
+        document.getElementById("ol01").style.display = "block";
+      }
+      function openQuasi() {
+        document.getElementById("quasi01").style.display = "block";
+      }
+
+      //open modal for delete and edit
+
+      //function update and delete for AC
+      function aceditsched() {}
+      function acdelsched() {
+        document.getElementById("acdel01").style.display = "block";
+      }
+      //function update and delete for OL
+      function oldelsched() {
+        document.getElementById("oldel01").style.display = "block";
+      }
+      //function update and delete for Quasi
+
+      function quasidelsched() {
+        document.getElementById("quadel01").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("ac01").style.display = "none";
+        document.getElementById("ol01").style.display = "none";
+        document.getElementById("quasi01").style.display = "none";
+
+        //delete buttons
+        document.getElementById("acdel01").style.display = "none";
+        document.getElementById("oldel01").style.display = "none";
+        document.getElementById("quadel01").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

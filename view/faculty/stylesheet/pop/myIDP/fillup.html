@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDP Generator | My Schedule</title>
+    <link rel="icon" href="../../../../font/assets/logo/idplogo.png" />
+    <link rel="stylesheet" href="../../../stylesheet/content/header.css" />
+    <link rel="stylesheet" href="../../../stylesheet/content/myidp.css" />
+    <!--extra style-->
+    <link rel="stylesheet" href="../../../../font/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../../../../font/preloader/loader.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body ondragstart="return false" onselectstart="return false">
+    <header class="header">
+      <a class="logo">
+        <img src="../../../../font/assets/logo/idplogo.png" class="img-logo" />
+        <div class="logo-text">
+          WMSU
+          <p>INDIVIDUAL DAILY PROGRAM</p>
+        </div>
+      </a>
+      <div class="pG">
+        <p id="page-title">MY SCHEDULE UPDATE</p>
+      </div>
+      <input type="checkbox" class="menu-btn" id="menu-btn" />
+      <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+      </label>
+      <ul class="menu">
+        <li id="dashboard-mobile">
+          <a href="../../../home.html" id="slide-home">
+            <p class="far fa-home"></p>
+            Home
+          </a>
+        </li>
+        <li id="dashboard-mobile">
+          <a href="../../../dashboard.html" id="slide-dashboard">
+            <p class="far fa-tachometer-alt"></p>
+            Dashboard
+          </a>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">IDP Settings</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a class="active" href="../../../myIDP.html" id="slide-faculty"
+                  ><p class="fas fa-calendar"></p>
+                  My Schedule</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li id="settings-mobile">
+          <div class="dropdown-nav">
+            <p class="far fa-cog"></p>
+            <span class="nav-title" id="settings">General Information</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="../../../matrix.html" id="slide-matrix"
+                  ><p class="far fa-cogs"></p>
+                  Matrix</a
+                ></span
+              >
+              <span
+                ><a href="../../../officials.html" id="slide-officials"
+                  ><p class="far fa-users"></p>
+                  Officials</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="dropdown-nav">
+            <p class="far fa-user-circle"></p>
+            <span class="nav-title" id="profile">Account</span>
+            <hr />
+            <div class="dropdown-content-nav">
+              <span
+                ><a href="../../../profile.html" id="slide-profile"
+                  ><p class="far fa-user-cog"></p>
+                  Profile</a
+                ></span
+              >
+              <br />
+              <span
+                ><a
+                  href="../../../../../index.php"
+                  id="slide-sign-out"
+                  class="bdr-top-line"
+                  ><p class="far fa-sign-out"></p>
+                  Logout</a
+                ></span
+              >
+            </div>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <nav class="side-nav">
+      <div class="side-nav-logo">
+        <img src="../../../../font/assets/logo/idplogo.png" alt="" />
+        <p id="nav-hd">WMSU IDP Generator</p>
+      </div>
+      <ul>
+        <a href="../../../home.html"
+          ><li><span class="far fa-home"></span>Home</li></a
+        >
+        <a href="../../../dashboard.html"
+          ><li><span class="far fa-tachometer-alt"></span>Dashboard</li></a
+        >
+        <li id="label-settings">IDP Settings</li>
+        <a href="../../../myIDP.html"
+          ><li class="active-sn">
+            <span class="fas fa-calendar"></span>My Schedule
+          </li></a
+        >
+        <li id="label-settings">General Information</li>
+        <a href="../../../matrix.html"
+          ><li><span class="far fa-cogs"></span>Matrix</li></a
+        >
+        <a href="../../../officials.html"
+          ><li><span class="far fa-users"></span>Officials</li></a
+        >
+      </ul>
+    </nav>
+    <main>
+      <!--preloader-->
+      <div class="loader">
+        <div class="preloadermain">
+          <div class="precircle"></div>
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain1">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+        <div class="preloadermain">
+          <div class="preloader01"></div>
+          <div class="preloader02"></div>
+          <div class="preloader03"></div>
+          <div class="preloader02"></div>
+        </div>
+      </div>
+      <script src="../../../../font/preloader/loader.js"></script>
+      <!--content-->
+      <div class="main">
+        <div class="content-header">
+          <div class="img-head">
+            <img
+              src="../../../../font/assets/vector/3125019.jpg"
+              id="idpvector"
+              alt=""
+            />
+          </div>
+          <div class="basic">
+            <form action="">
+              <div class="info">
+                <p>Faculty Type:</p>
+                <select name="faculty-type" id="faculty-type">
+                  <option value="regular">Regular</option>
+                  <option value="visitLec">Visiting Lecturer</option>
+                </select>
+                <p>First Name</p>
+                <input
+                  type="text"
+                  id="name"
+                  value="John Paul"
+                  autocomplete="off"
+                  required
+                />
+                <p>Last Name</p>
+                <input
+                  type="text"
+                  id="name"
+                  value="Arip"
+                  autocomplete="off"
+                  required
+                />
+                <p>M.I (Optional)</p>
+                <input type="text" id="mi" maxlength="1" autocomplete="off" />
+                <p>Academic Rank:</p>
+                <select name="" id="">
+                  <option value="">Instructor I</option>
+                  <option value="">Instructor II</option>
+                  <option value="">Instructor III</option>
+                  <option value="">Assistant Professor I</option>
+                  <option value="">Assistant Professor II</option>
+                  <option value="">Assistant Professor II</option>
+                  <option value="">Assistant Professor IV</option>
+                  <option value="">Associate Professor I</option>
+                  <option value="">Associate Professor II</option>
+                  <option value="">Associate Professor II</option>
+                  <option value="">Associate Professor IV</option>
+                  <option value="">Associate Professor V</option>
+                  <option value="">Professor I</option>
+                  <option value="">Professor II</option>
+                  <option value="">Professor II</option>
+                  <option value="">Professor IV</option>
+                  <option value="">Professor V</option>
+                  <option value="">Professor VI</option>
+                  <option value="">College Professor</option>
+                  <option value="">University Professor</option>
+                </select>
+                <p>Designation:</p>
+                <input
+                  type="text"
+                  id="designation"
+                  value=""
+                  autocomplete="off"
+                  onchange="mode()"
+                />
+                <p id="designation-mode"></p>
+                <p id="lbl-release">Release Time:</p>
+                <input
+                  type="number"
+                  id="release"
+                  value=""
+                  autocomplete="off"
+                  onchange="checkp()"
+                  style="width: 4rem"
+                  required
+                />
+                <p id="alertp">Out of choices!</p>
+                <p id="approved">Approved!</p>
+                <br />
+                <p id="lbl-actual">Your Actual Teaching Hours:</p>
+                <input
+                  type="number"
+                  id="actual"
+                  value="0"
+                  style="cursor: not-allowed; width: 4rem"
+                  disabled
+                />
+              </div>
+              <script>
+                function checkp() {
+                  var d = document.getElementById("release").value;
+                  var des = document.getElementById("designation").value;
+                  if (des != "") {
+                    if (d != 3 && d != 6 && d != 9 && d != 12 && d != 15) {
+                      document.getElementById("alertp").style.display = "block";
+                      document.getElementById("approved").style.display =
+                        "none";
+                      document.getElementById("release").value = "";
+                    } else {
+                      document.getElementById("approved").style.display =
+                        "block";
+                      document.getElementById("alertp").style.display = "none";
+                      document.getElementById("actual").value = 18 - d;
+                    }
+                  } else {
+                    if (d != 18 && d != 21 && d != 24) {
+                      document.getElementById("alertp").style.display = "block";
+                      document.getElementById("approved").style.display =
+                        "none";
+                      document.getElementById("release").value = "";
+                    } else {
+                      document.getElementById("approved").style.display =
+                        "block";
+                      document.getElementById("alertp").style.display = "none";
+                    }
+                  }
+                }
+                //Checking for w or w/o designation
+                var designation = document.getElementById("designation").value;
+
+                if (designation != "") {
+                  document.getElementById("designation-mode").innerHTML =
+                    "<br>Faculty with Designation: Choices: <font color='green'>3 6 9 12 15</font>";
+                  document.getElementById("lbl-release").innerHTML =
+                    "Release Time";
+                  document.getElementById("lbl-actual").innerHTML =
+                    "Actual Teaching Load";
+                } else {
+                  document.getElementById("designation-mode").innerHTML =
+                    "<br>Faculty without Designation: Choices: <font color='green'>18 21 24</font>";
+                  document.getElementById("lbl-release").innerHTML =
+                    "Actual Teaching Load";
+                  document.getElementById("lbl-actual").innerHTML =
+                    "Release Time";
+                }
+                //onchange
+                function mode() {
+                  var designation = document.getElementById("designation")
+                    .value;
+                  var d = document.getElementById("release").value;
+                  if (designation != "") {
+                    document.getElementById("designation-mode").innerHTML =
+                      "<br>Faculty with Designation: Choices: <font color='green'>3 6 9 12 15</font>";
+                    document.getElementById("release").value = "";
+                    document.getElementById("lbl-release").innerHTML =
+                      "Release Time";
+                    document.getElementById("lbl-actual").innerHTML =
+                      "Actual Teaching Load";
+                  } else {
+                    document.getElementById("designation-mode").innerHTML =
+                      "<br>Faculty without Designation: Choices: <font color='green'>18 21 24</font>";
+                    document.getElementById("lbl-release").innerHTML =
+                      "Actual Teaching Load";
+                    document.getElementById("lbl-actual").innerHTML =
+                      "Release Time";
+                  }
+                }
+              </script>
+              <div class="info">
+                <p>Educational Qualification:</p>
+                <input
+                  type="text"
+                  id="qualification"
+                  value="BA Political Science, BS Computer Science with Specialization in
+                SECURITY AND DEGITAL FORENSICS, MS COMPUTER SCIENCE (27 UNITS
+                EARNED)"
+                  autocomplete="off"
+                  required
+                />
+                <p>Major Assignment:</p>
+                <input
+                  type="text"
+                  id="assessment"
+                  value="Teaching"
+                  autocomplete="off"
+                  required
+                />
+                <div class="btn-field">
+                  <a href="../../../myIDP.html"
+                    ><button type="button" id="backdet">Back</button>
+                  </a>
+                  <button type="submit" id="editdet">Update Details</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
