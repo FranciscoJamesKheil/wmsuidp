@@ -4,105 +4,9 @@ main {
   top: 57px;
   right: 0;
 }
-.slider {
-  margin: 0 auto;
-  width: 100%;
-  background: url(../../../font/assets/bg/25102.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 0 0 30px 30px;
-}
-
-.slide_viewer {
-  height: 250px;
-  overflow: hidden;
-  position: relative;
-}
-
-.slide_group {
-  height: 100%;
-  position: relative;
-  width: 100%;
-}
-
-.slide {
-  padding: 20px;
-  text-align: center;
-  display: none;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-.slide img {
-  width: 8rem;
-  opacity: 0.8;
-}
-.mivision {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  padding: 5px;
-}
-.mission {
-  flex: 1;
-  background: rgb(160, 0, 0);
-  color: white;
-  height: 4rem;
-  padding: 10px 0;
-  border-radius: 10px 0 0 10px;
-}
-.vision {
-  flex: 1;
-  background: rgb(255, 255, 255);
-  color: rgb(160, 0, 0);
-  height: 4rem;
-  padding: 10px 0;
-  border-radius: 0 10px 10px 0;
-}
-.slide:first-child {
-  display: block;
-}
-
-.slide:nth-of-type(1) {
-  color: rgb(160, 0, 0);
-}
-
-.slide:nth-of-type(2) {
-  color: rgb(160, 0, 0);
-}
-
-.slide:nth-of-type(3) {
-  color: rgb(160, 0, 0);
-}
-
-.slide_buttons {
-  left: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  background: white;
-}
-
-a.slide_btn {
-  color: rgb(163, 163, 163);
-  font-size: 42px;
-  margin: 0 0.175em;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-
-.slide_btn.active,
-.slide_btn:hover {
-  background: transparent;
-  color: rgb(160, 0, 0);
-  cursor: pointer;
-}
 
 .idp-info {
-  margin: 3rem 0;
+  margin: 0 0 3rem 0;
   background: rgb(255, 255, 255);
   width: 100%;
   padding: 10px 5px;
@@ -251,20 +155,6 @@ footer #img-footer {
   main {
     width: 100%;
   }
-  .previous_btn {
-    left: 10px;
-  }
-  .next_btn {
-    right: 10px;
-  }
-  .previous_btn,
-  .next_btn {
-    height: 40px;
-  }
-  .slider {
-    background-position-x: 50%;
-  }
-
   .idp-info {
     flex-direction: column;
   }
